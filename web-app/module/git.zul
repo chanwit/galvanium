@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?page zscriptLanguage="GroovyGrails"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:h="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+<style>
+    .head2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .z-tabpanel, .z-tabbox-ver .z-tabpanels-ver {
+        border: 0;
+    }
+</style>
+
+<window apply="galvanium.module.gitComposer" width="100%">
+    <vbox hflex="1" stubonly="true">
+        <label sclass="head2" id="lblRepository" stubonly="false">Git repository</label>
+        <separator bar="true"/>
+        <tree id="tree" stubonly="false">
+            <treecols>
+                <treecol label="Name"/>
+                <treecol label="Size"/>
+                <treecol label="Revision"/>
+                <treecol label="Age"/>
+                <treecol label="Author"/>
+                <treecol label="Comment"/>
+            </treecols>
+            <treechildren>
+                <treeitem>
+                    <treerow>
+                        <treecell label="test"/>
+                    </treerow>
+                </treeitem>
+            </treechildren>
+        </tree>
+        <space/>
+        <label sclass="head2">Last revisions</label>
+        <separator bar="true"/>
+        <grid id="gdRevisions" stubonly="false">
+            <columns>
+                <column label="#"       width="90px"/>
+                <column label="Date"    width="200px"/>
+                <column label="Author"  width="200px"/>
+                <column label="Comment"/>
+            </columns>
+            <rows>
+            </rows>
+        </grid>
+    </vbox>
+</window>
+</zk>
