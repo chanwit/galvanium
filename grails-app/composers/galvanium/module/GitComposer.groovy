@@ -19,7 +19,7 @@ class GitComposer extends GrailsComposer {
         // TODO read from config
         def gitRepository = Setting.findByKey("module.scm.git.repository")
         if(gitRepository) {
-            def repo = builder.setGitDir(new File("/tmp/test-repo/.git")).readEnvironment().findGitDir().build()
+            def repo = builder.setGitDir(new File(gitRepository.value)).readEnvironment().findGitDir().build()
             lblRepository.value = "Git repository - ${repo.getBranch()}"
             def walk = new RevWalk(repo)
             def headCommit = walk.parseCommit(repo.resolve("HEAD"))
