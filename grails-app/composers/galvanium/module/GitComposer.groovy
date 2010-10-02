@@ -13,6 +13,7 @@ class GitComposer extends GrailsComposer {
 
     def afterCompose = { window ->
         def builder = new RepositoryBuilder()
+        // TODO read from config
         def repo = builder.setGitDir(new File("/tmp/test-repo/.git")).readEnvironment().findGitDir().build()
         lblRepository.value = "Git repository - ${repo.getBranch()}"
         def walk = new RevWalk(repo)
