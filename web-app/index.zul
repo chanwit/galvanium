@@ -67,7 +67,7 @@
     </center>
     <south border="none">
         <hbox pack="center" hflex="1">
-            <label>(c) 2010 Chanwit Kaewkasi</label>
+            <h:div>Powered by <a href="http://github.com/galvanium">Galvanium</a> (c) 2010 Chanwit Kaewkasi</h:div>
         </hbox>
     </south>
 </borderlayout>
