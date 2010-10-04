@@ -23,14 +23,14 @@
     <north border="none">
         <hlayout id="topBar" hflex="1">
             <hlayout spacing="10px">
-                <h:a href="#home">Home</h:a>
-                <h:a href="#projects">Projects</h:a>
-                <h:a href="#help">Help</h:a>
+                <h:a class="z-a" href="#home">Home</h:a>
+                <h:a class="z-a" href="#projects">Projects</h:a>
+                <h:a class="z-a" href="#help">Help</h:a>
             </hlayout>
             <separator hflex="1"/>
             <hlayout spacing="10px">
-                <h:a href="#signin">Sign in</h:a>
-                <h:a href="#register">Register</h:a>
+                <h:a class="z-a" href="#signin">Sign in</h:a>
+                <h:a class="z-a" href="#register">Register</h:a>
             </hlayout>
         </hlayout>
     </north>
