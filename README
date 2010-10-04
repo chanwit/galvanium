@@ -1,0 +1,6 @@
+Current configuration
+=====================
+
+  * Grails 1.3.5
+  * ZK 5.0.4 (via ZKGrails 1.0-M5)
+  * Redis (pending)
