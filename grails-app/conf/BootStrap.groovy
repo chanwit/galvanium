@@ -21,6 +21,14 @@ class BootStrap {
         // Setting up some configs
         //
         new Setting(key:"module.scm.git.repository", value:"/tmp/test-repo/.git").save()
+
+        // Setting up some projects
+        new Project(name:"Galvanium", 
+                    shortName:"galvanium", 
+                    description:"This is the galvanium project.").save()
+        new Project(name:"Redmine", 
+                    shortName:"redmine", 
+                    description:"Redmine is a flexible project management web application written using Ruby on Rails framework.").save()
     }
 
     def destroy = {
