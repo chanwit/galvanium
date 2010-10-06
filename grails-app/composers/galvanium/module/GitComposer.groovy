@@ -31,8 +31,9 @@ class GitComposer extends GrailsComposer {
                         label(value: commit.name[0..9])
                         label(value: commit.authorIdent.when)
                         label(value: commit.authorIdent.name)
-                        label(value: commit.shortMessage)
-                        // todo: possibly adding link with h.html(value: "...")
+                        //label(value: )
+                        def msg = commit.shortMessage.replaceAll(/#(\d+)/, '#<a href="#galvanium-$1">$1</a>')
+                        html(content: msg)
                     }
                 }
             }
