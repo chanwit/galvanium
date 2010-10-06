@@ -8,54 +8,49 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
 
-<window apply="galvanium.indexComposer" width="100%">
-    <vbox hflex="1">
-        <hbox id="topBar" hflex="1">
-            <hbox spacing="10px">
-                <label>Home</label>
-                <label>Projects</label>
-                <label>Help</label>
-            </hbox>
-            <separator hflex="1"/>
-            <hbox spacing="10px">                
-                <label>Sign in</label>
-                <label>Register</label>
-            </hbox>
-        </hbox>
-        <hbox id="mainBar" hflex="1" align="middle">
-            <h:h1>Galvanium</h:h1>
-            <separator hflex="1"/>
-            <hbox>
-                Search : <textbox id="txtSearch"/>
-            </hbox>
-        </hbox>
-        <tabbox id="mainTabs" hflex="1">
-            <tabs id="tabs">
-                <tab label="Overview"/>
-                <tab label="Download"/>
-                <tab label="Activity"/>
-                <tab label="Roadmap"/>
-                <tab label="Issues"/>
-                <tab label="News"/>
-                <tab label="Wiki"/>
-                <tab label="Forums"/>
-                <tab label="Repository"/>
-            </tabs>
-            <tabpanels>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel></tabpanel>
-                <tabpanel>
-                    <include src="module/git.zul"/>
-                </tabpanel>
-            </tabpanels>
-        </tabbox>        
-    </vbox>
-</window>
+<window id="wndMain" apply="galvanium.indexComposer" width="100%" height="100%">
+<style>
+    .head2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .z-tabpanel, .z-tabbox-ver .z-tabpanels-ver {
+        border: 0;
+    }
+</style>
 
+<borderlayout>
+    <north border="none">
+        <hlayout id="topBar" hflex="1">
+            <hlayout spacing="10px">
+                <h:a class="z-a" href="#home">Home</h:a>
+                <h:a class="z-a" href="#projects">Projects</h:a>
+                <h:a class="z-a" href="#help">Help</h:a>
+            </hlayout>
+            <separator hflex="1"/>
+            <hlayout spacing="10px">
+                <h:a class="z-a" href="#signin">Sign in</h:a>
+                <h:a class="z-a" href="#register">Register</h:a>
+            </hlayout>
+        </hlayout>
+    </north>
+    <center border="none">
+        <vlayout hflex="1">
+            <hlayout id="mainBar" hflex="1">
+                <h:h1>Galvanium</h:h1>
+                <separator hflex="1"/>
+                <hlayout>
+                    Search : <textbox id="txtSearch"/>
+                </hlayout>
+            </hlayout>
+            <include id="mainInc" src="core/home.zul" hflex="1" height="1000px"/>
+        </vlayout>
+    </center>
+    <south border="none">
+        <hlayout style="float: right;">
+            <h:div>Powered by <a href="http://github.com/galvanium">Galvanium</a> (c) 2010 Chanwit Kaewkasi</h:div>
+        </hlayout>
+    </south>
+</borderlayout>
+</window>
 </zk>
