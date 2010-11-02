@@ -20,7 +20,9 @@ class BootStrap {
         //
         // Setting up some configs
         //
-        new Setting(key:"module.scm.git.repository", value:"/tmp/test-repo/.git").save()
+        new Setting(key:"module.scm.git.repository", 
+                    value:"/tmp/test-repo/.git",
+                    enabled:false).save()
 
         // Setting up some projects
         new Project(name:"Galvanium", 
