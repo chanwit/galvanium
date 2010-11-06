@@ -1,0 +1,7 @@
+class EventBus {
+
+    def onAddContact = {
+        
+    }
+
+}

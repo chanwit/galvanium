@@ -8,17 +8,25 @@ import org.zkoss.zk.ui.event.*
 //
 class IndexComposer extends GrailsComposer {
 
-
+    def btnTest
     def mainInc
 
     def places = {
         "/$activity/$id?" {
-           container = mainInc 
+            container = mainInc 
         }
     }
 
+    def onClick_btnTest(e) {
+        //
+        // indexPresenter.btnTestClicked()
+        //
+    }
 
     def onBookmarkChange_wndMain(BookmarkEvent ev) {
+        //
+        // container.src = "${ev.bookmark}.zul"
+        //
         mainInc.src = "core/${ev.bookmark}.zul"
     }
 
