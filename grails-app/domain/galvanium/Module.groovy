@@ -6,6 +6,10 @@ class Module {
     String url = ""
     Boolean enabled = true
 
+    static mapping = {
+        enabled index: true
+    }
+
     static constraints = {
         name()
         url()

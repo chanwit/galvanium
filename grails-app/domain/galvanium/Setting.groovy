@@ -6,6 +6,10 @@ class Setting {
     String  value
     Boolean enabled = true
 
+    static mapping = {
+        key index: true
+    }
+
     static constraints = {
         key()
         value()

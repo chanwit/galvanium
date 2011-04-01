@@ -3,6 +3,7 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 
 grails.plugin.location."zk-mvp" = "../zk-mvp"
+grails.plugin.location."zk-datastore" = "../zk-datastore"
 
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 grails.project.dependency.resolution = {

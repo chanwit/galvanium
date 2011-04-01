@@ -8,7 +8,7 @@ class ProjectsComposer extends GrailsComposer {
     def vboxProjects
 
     def afterCompose = { window ->
-        def projects = Project.list(max: 10)
+        def projects = Project.list()
         vboxProjects.append {
             projects.each { p ->
                 vbox {
